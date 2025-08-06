@@ -1,0 +1,369 @@
+body {
+  background-color: #fff8f0;
+}
+.bg-dark-red {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.logo {
+  height: 50px;
+}
+.hero {
+  background: linear-gradient(to right, #8b0000, #d97706);
+}
+.card i {
+  display: block;
+}
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  z-index: 1; /* above floating icons */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-link:hover .card {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  z-index: 5; /* bring forward */
+}
+
+/* Tooltip popup */
+.tooltip-popup {
+  position: absolute;
+  bottom: 100%; /* above the card */
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background-color: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+  z-index: 10;
+  user-select: none;
+}
+
+.card-link:hover .tooltip-popup {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(-20px);
+}
+.typing-text {
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: monospace; /* Ensures consistent character width */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white;
+  width: 0;
+  animation: typing 8s steps(98, end) infinite, blink-caret 0.75s step-end infinite;
+  margin: 0 auto;
+}
+
+/* Typing animation */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  80% {
+    width: 98ch;  /* Only type 98 characters wide */
+  }
+  100% {
+    width: 0;     /* Reset to start */
+  }
+}
+
+/* Cursor blinking */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* behind content */
+  background-color: #fff8f0;
+}
+
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.language-selector button {
+  background-color: #fff;
+  color: #8b0000;
+  border: 2px solid #8b0000;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.language-selector button:hover {
+  background-color: #8b0000;
+  color: #fff;
+}
+
+/* Report Container */
+.report-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.report-container h2 {
+  color: #8b0000;
+  margin-bottom: 20px;
+}
+
+.report-container p {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+textarea,
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #8b0000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #a30000;
+}
+
+/* Success message */
+.success-message {
+  margin-top: 20px;
+  padding: 15px;
+  border: 2px solid #4caf50;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
+/* Animated Hamburger */
+.custom-toggler {
+  border: none;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  background: transparent;
+}
+
+.toggler-icon {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+/* Animate to 'X' when active */
+.custom-toggler[aria-expanded="true"] .top-bar {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.custom-toggler[aria-expanded="true"] .middle-bar {
+  opacity: 0;
+}
+
+.custom-toggler[aria-expanded="true"] .bottom-bar {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Slide-down effect for mobile menu */
+.navbar-collapse {
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  overflow: hidden;
+}
+/* Fix hamburger button */
+.custom-toggler {
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  padding: 0;
+  position: relative;
+  z-index: 1050;
+}
+
+.custom-toggler .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: 0.4s ease;
+}
+
+/* Animate to 'X' when active */
+.custom-toggler.collapsed .top-bar {
+  transform: rotate(0) translateY(0);
+}
+
+.custom-toggler:not(.collapsed) .top-bar {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.custom-toggler.collapsed .middle-bar {
+  opacity: 1;
+}
+
+.custom-toggler:not(.collapsed) .middle-bar {
+  opacity: 0;
+}
+
+.custom-toggler.collapsed .bottom-bar {
+  transform: rotate(0) translateY(0);
+}
+
+.custom-toggler:not(.collapsed) .bottom-bar {
+  transform: rotate(-45deg) translateY(-8px);
+}
+.language-selector select {
+  background-color: #fff;
+  color: #8b0000;
+  border: 2px solid #8b0000;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-selector select:hover {
+  background-color: #8b0000;
+  color: #fff;
+}
+
+.wave-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.wave-background svg {
+  width: 200%;
+  height: 100%;
+  animation: waveMove 8s linear infinite;
+}
+
+.wave-background path {
+  fill: #0099ff;
+  opacity: 0.4;
+}
+
+@keyframes waveMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  top: 0;
+  left: 0;
+}
+
+.wave-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.wave-background svg {
+  width: 100%;
+  height: 100%;
+  animation: waveMove 8s linear infinite;
+}
+
+.wave-background path {
+  fill: #38bdf8; /* Tailwind light blue */
+  opacity: 0.35;
+}
+
+@keyframes waveMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
