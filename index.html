@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PAWHA | GHS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="particles-js"></div>
+<div class="wave-background">
+  <svg viewBox="0 0 1200 200" preserveAspectRatio="none">
+    <path d="M0,100 C300,200 900,0 1200,100 L1200,200 L0,200 Z"></path>
+  </svg>
+</div>
+
+
+  <!-- Header -->
+<header class="bg-dark-red">
+  <nav class="navbar navbar-expand-lg navbar-dark container-fluid px-4">
+    <div class="d-flex align-items-center">
+      <img src="logo.png" alt="PAWHA Logo" class="logo me-2" />
+      <div class="d-none d-md-block">
+        <span class="navbar-brand mb-0 h5">PAWHA AI Health Platform</span><br />
+        <small class="fst-italic text-white">Our Voice Our Legacy</small>
+      </div>
+    </div>
+
+    <!-- HAMBURGER BUTTON -->
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="bar top-bar"></span>
+      <span class="bar middle-bar"></span>
+      <span class="bar bottom-bar"></span>
+    </button>
+
+    <!-- MENU -->
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#dashboard">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#report">Report</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#alerts">Alerts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#education">Education</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+  <!-- Hero -->
+  <section class="hero text-white text-center py-5 px-3">
+    <h2 class="display-5">AI-Powered Global Health Security</h2>
+    <p class="typing-text">Empowering communities with real-time detection, anonymous reporting, and AI health guidance.</p>
+  </section>
+
+  <!-- Services -->
+  <section class="container py-5">
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-3">
+      <a href="anonymous-report.html" class="card-link">
+        <div class="card h-100 border-start border-4 border-success shadow position-relative">
+          <div class="card-body">
+            <i class="fas fa-user-secret fa-2x text-success mb-3"></i>
+            <h5 class="card-title">Anonymous Reporting</h5>
+            <p class="card-text">Use WhatsApp, SMS, or chatbot to report symptoms privately and safely.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+      <a href="#real-time-alerts" class="card-link">
+        <div class="card h-100 border-start border-4 border-warning shadow position-relative">
+          <div class="card-body">
+            <i class="fas fa-bell fa-2x text-warning mb-3"></i>
+            <h5 class="card-title">Real-Time Alerts</h5>
+            <p class="card-text">Receive timely outbreak notifications and public health messages.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+      <a href="#ai-health-guidance" class="card-link">
+        <div class="card h-100 border-start border-4 border-info shadow position-relative">
+          <div class="card-body">
+            <i class="fas fa-robot fa-2x text-info mb-3"></i>
+            <h5 class="card-title">AI Health Guidance</h5>
+            <p class="card-text">Ask questions and get AI-generated answers based on official protocols.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+      <a href="#health-education" class="card-link">
+        <div class="card h-100 border-start border-4 border-danger shadow position-relative">
+          <div class="card-body">
+            <i class="fas fa-book-medical fa-2x text-danger mb-3"></i>
+            <h5 class="card-title">Health Education</h5>
+            <p class="card-text">Learn about prevention, care, and emergency support in your community.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
