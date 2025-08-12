@@ -1,0 +1,96 @@
+/* Full screen canvas */
+#bg-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* behind everything */
+background: linear-gradient(
+  135deg, 
+  #005d5d 0%, 
+  #a2b630 40%, 
+  #007a7a 70%, 
+  #005d5d 100%
+);
+
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .content-wrapper {
+    flex: 1; /* take all available vertical space */
+  }
+
+/* Make sure your container is above the canvas */
+.container, .header {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+.typing-effect {
+  font-family: monospace;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white; /* cursor */
+  width: 0;
+  animation: typing 3.5s steps(18) infinite, blink 0.7s step-end infinite;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 20.5ch; /* length of "Anonymous Reporting" */
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    border-color: white;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+
+    .header {
+      padding: 15px;
+      text-align: center;
+    }
+    .logo {
+      max-height: 80px;
+    }
+    .card {
+      border: none;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+    .btn-yes {
+      background: linear-gradient(to right, #4caf50, #8bc34a);
+      border: none;
+      color: white;
+    }
+    .btn-no {
+      background: linear-gradient(to right, #f44336, #e91e63);
+      border: none;
+      color: white;
+    }
+    .progress {
+      height: 10px;
+    }
+    
