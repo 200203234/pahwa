@@ -1,0 +1,57 @@
+:root{
+  --pahwa-maroon: #8B1E0F;
+  --pahwa-dark: #6F1208;
+  --pahwa-orange: #F26B21;
+  --pahwa-sun: #F9C74F;
+  --pahwa-teal: #007F7F;
+  --page-bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --sidebar-width: 280px;
+  --sidebar-collapsed: 80px;
+  --muted: #6c757d;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--page-bg), #ffffff00 150px);
+  color: #111827;
+}
+
+/* Dark mode */
+body.dark {
+  --card-bg: #007F7F;
+  --page-bg: #007F7F;
+  color: black;
+  background: linear-gradient(180deg, var(--page-bg), #00000000 150px);
+}
+
+/* Navbar brand icon */
+.brand-icon img {
+  width:36px;height:36px;border-radius:6px;
+  background:linear-gradient(135deg,var(--pahwa-orange),var(--pahwa-sun));
+  box-shadow:0 3px 8px rgba(0,0,0,0.08);
+}
+
+/* Main area */
+.main { flex:1; transition: margin-left 0.2s; }
+
+/* Cards */
+.card { border-radius: .6rem; box-shadow: 0 6px 18px rgba(17,24,39,0.06); background: var(--card-bg); }
+.map-card { height: 520px; padding: 0; overflow: hidden; }
+#map { width: 100%; height: 320px; }
+
+/* Alerts */
+.alert-card { border-left: 4px solid rgba(0,0,0,0.04); margin-bottom:.6rem; padding:.9rem; }
+.alert-card.unread { box-shadow: 0 3px 10px rgba(0,0,0,0.06); border-left-color: var(--pahwa-orange); background: linear-gradient(180deg, rgba(242,107,33,0.03), var(--card-bg)); }
+
+/* Small summary */
+.small-summary { width: 170px; min-width: 140px; }
+
+/* Insight box */
+.insight { background: linear-gradient(90deg,#fff, #fff0); padding: .9rem; border-radius: .5rem; }
+
+
+
+/* Tiny helpers */
+.stat { font-weight: 700; font-size: 1.35rem; }
+.small-muted { color: var(--muted); font-size: .9rem; }
